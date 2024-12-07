@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  <header>
+    <img src="./assets/images/logo.svg" alt="" class="brand__logo">
+  </header>
   <main>
     <form class="calculator" aria-labelledby="calculator-heading">
       <div class="calculator-input-div">
@@ -22,7 +25,7 @@
           <label for="bill">Bill</label>
           <div class="bill__input">
             <img src="./assets/images/icon-dollar.svg" alt="Dollar sign" class="input__img" />
-            <input type="text" id="bill" name="bill" placeholder="0.00" aria-label="Bill amount" />
+            <input type="text" id="bill" name="bill" placeholder="0" aria-label="Bill amount" />
           </div>
         </div>
         <div class="calculator__tip">
@@ -33,32 +36,36 @@
             <button type="button" class="tip__button" aria-label="15 percent tip">15%</button>
             <button type="button" class="tip__button" aria-label="25 percent tip">25%</button>
             <button type="button" class="tip__button" aria-label="50 percent tip">50%</button>
-            <input type="text" id="custom" placeholder="Custom" class="custom__button" aria-label="Custom tip percentage" />
+            <input type="text" id="custom" placeholder="Custom" class="custom__button"
+              aria-label="Custom tip percentage" />
           </div>
         </div>
         <div class="calculator__people">
           <label for="people">Number of People</label>
-          <input type="number" id="people" placeholder="0" aria-label="Number of people" />
+          <div class="people__input">
+            <img src="./assets/images/icon-person.svg" alt="Person icon" class="input__img" />
+            <input type="text" id="people" name="people" placeholder="0" aria-label="Number of people" />
+          </div>
         </div>
       </div>
 
       <div class="calculator__results">
         <div class="calculator__results__tip">
-          <p>Tip Amount <span>/ person</span></p>
+          <p class="tip__amount__person">Tip Amount <span class="per__person">/ person</span></p>
           <p class="tip__amount" aria-live="polite">0.00</p>
         </div>
         <div class="calculator__results__total">
-          <p>Total <span>/ person</span></p>
+          <p class="total__person">Total <span class="per__person">/ person</span></p>
           <p class="total__amount" aria-live="polite">0.00</p>
         </div>
-        <button type="reset" class="reset__btn" aria-label="Reset calculator">Reset</button>
+        <button type="reset" class="reset__btn" aria-label="Reset calculator" id="reset">Reset</button>
       </div>
     </form>
   </main>
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank"
-        rel="noopener noreferrer">Frontend Mentor</a>.</p>
-    <p>Coded by <a href="https://www.github.com/Mayen007">Mayen007</a>.</p>
+        rel="noopener noreferrer">Frontend Mentor</a>. Coded by <a href="https://www.github.com/Mayen007">Mayen007</a>.
+    </p>
   </footer>
 
   <script src="./assets/static/script.js"></script>
