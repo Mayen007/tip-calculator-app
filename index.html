@@ -36,12 +36,15 @@
             <button type="button" class="tip__button" aria-label="15 percent tip">15%</button>
             <button type="button" class="tip__button" aria-label="25 percent tip">25%</button>
             <button type="button" class="tip__button" aria-label="50 percent tip">50%</button>
-            <input type="text" id="custom" placeholder="Custom" class="custom__button"
+            <input type="text" id="custom-tip" placeholder="Custom" class="custom__button"
               aria-label="Custom tip percentage" />
           </div>
         </div>
         <div class="calculator__people">
-          <label for="people">Number of People</label>
+          <div class="people__error">
+            <label for="people">Number of People</label>
+            <span id="people-error" class="error-message" aria-live="polite"></span>
+          </div>
           <div class="people__input">
             <img src="./assets/images/icon-person.svg" alt="Person icon" class="input__img" />
             <input type="text" id="people" name="people" placeholder="0" aria-label="Number of people" />
